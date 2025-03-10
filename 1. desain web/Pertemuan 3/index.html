@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frame</title>
+</head>
+
+<frameset rows="20%,10%,60%,10%">
+    <frame src="frame_content/header.html">Header</frame>
+    <frame src="frame_content/navigation_menu.html">Navigation Menu</frame>
+        <frameset cols="25%,50%,25%">
+            <frame src="frame_content/left.html">Content left</frame>
+            <frame src="frame_content/main_content/home.html" name="navigation">Main Content</frame>
+            <frame src="frame_content/right.html">Content right</frame>
+        </frameset>
+    <frame src="frame_content/footer.html">Footer</frame>
+</frameset>
+
+<body></body>
+</html>

@@ -1,0 +1,64 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+/* class */
+
+.header{
+    background-color: rgb(255, 255, 149);
+    background-position: center;
+    text-align: center;
+    padding: 15px;
+}
+
+.navbar{
+    margin: 0;
+    background-color: grey;
+    padding: 5px;
+    text-align: center;
+}
+
+a{
+    overflow: hidden;
+    text-decoration: none;
+    color: rgb(52, 231, 255);
+    padding: 10px;
+}
+
+a:hover{
+    background-color: blue;
+}
+
+.column.side{
+    width: 25%;
+}
+
+.column.middle{
+    width: 50%;
+}
+
+.column{
+    float: left;
+    padding: 15px;
+}
+
+.row{
+    padding: 20px;
+    margin: 20px;
+}
+
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.footer{
+    background-color: rgb(93, 255, 93);
+    text-align: center;
+    padding: 15px;
+}
