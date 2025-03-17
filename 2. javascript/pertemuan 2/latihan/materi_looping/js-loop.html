@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Looping for & while</title>
+</head>
+<body>
+    <script>
+        //Looping for 1 - 10
+        let x;
+        for(x=1; x<10; x++){
+            document.write(x + "<br>");
+        }
+
+        //Looping for 10 - 1
+        let y;
+        for(y=10; y>0; y--){
+            document.write(y + "<br>");
+        }
+
+        //Looping while
+        let z=0;
+        while(z < 10){
+            document.write(z + "<br>");
+            z++;
+        }
+    </script>
+        <br><hr>
+    <script>
+        let angka;
+        for(angka=1; angka<=30; angka++){
+            if(angka == 20) continue; //Lanjut looping tetapi skip angkanya
+                if(angka == 30) break; //Berenti looping
+        document.write("<br>No. " + angka)
+        };
+    </script>
+        <br><hr>
+    <script>
+        let nomor;
+        for(nomor=100; nomor>=50; nomor--){
+            // if(nomor == 10) continue; //Lanjut looping tetapi skip nomornya
+            //     if(nomor == 30) break; //Berenti looping
+        document.write("<br>No. " + nomor)
+        };
+    </script>
+        <br><hr>
+    <script>
+        // let nilai;
+        // for(nilai=1; nilai<=50; nilai++){
+        //     // menentukan bilangan ganjil dengan modulus 2 sisa 1
+        //     if(nilai %2 ==1) document.write("<br>nilai. " + nilai);
+        // }
+
+        let nilai;
+        for(nilai=1; nilai<=50; nilai++){
+            // menentukan bilangan genap dengan modulus 2 sisa 0
+            if(nilai %2 == 0) document.write("<br>nilai. " + nilai);
+        }
+    </script>
+        <hr><br>
+    <script>
+        // menggunakan radio button
+        let r;
+        for(r=10; r>=1; r--){
+            document.write("<input type='radio' name='jumlah' value'" + r + "'>" + r + "<br>");
+        }
+    </script>
+</body>
+</html>

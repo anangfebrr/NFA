@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Pegawai</title>
+</head>
+<body>
+    <script>
+        // Data Pegawai - Input dapat diubah
+        let pegawai = "Dodi Prayodi"; 
+        let umur = 25; 
+        let jabatan = "Manajer"; 
+        let status = "Menikah"; 
+
+        // Jabatan & Gaji
+        switch (jabatan) {
+            case "Manajer":
+                gaji_pokok = 15000000;
+                    break;
+            case "Asisten Manajer":
+                gaji_pokok = 10000000;
+                    break;
+            case "Staff":
+                gaji_pokok = 5000000;
+                    break;
+            default: gaji_pokok = 0;
+                break;
+        }
+
+        // Tunjangan & BPJS
+        let tunjangan_jabatan = 0.15 * gaji_pokok;
+        let bpjs = 0.10 * gaji_pokok;
+
+        // Tunjangan keluarga(Ternary)
+        let tunjangan_keluarga = (status === "Menikah") ? 0.20 * gaji_pokok : 0;
+
+        // Total Gaji
+        let total_gaji = gaji_pokok + tunjangan_jabatan - bpjs + tunjangan_keluarga;
+
+        // Output
+        document.body.innerHTML += `
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Nama Pegawai</th>
+                        <th>Umur</th>
+                        <th>Jabatan</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>${pegawai}</td>
+                        <td>${umur}</td>
+                        <td>${jabatan}</td>
+                        <td>${status}</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4">Total gaji pegawai yaitu: ${total_gaji}</td>
+                    </tr>
+                </tfoot>
+            </table>
+            `;
+
+    </script>
+</body>
+</html>

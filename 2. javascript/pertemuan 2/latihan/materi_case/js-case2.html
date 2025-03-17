@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Case 2 - Pembelian barang</title>
+</head>
+<body>
+    <script>
+        //Pelanggan membeli barang elektronik dengan proses:
+        //1. Menentukan barang & jumlah barang
+        //2. Menambahkan proses diskon dari setiap barang
+        //3. Mencetak hasil pembelian barang dan totalnya
+
+        let pembeli = "Aquaa"; //input dapat diubah
+        let barang = "Motor"; //input dapat diubah
+        let harga_satuan = 0;
+
+        switch (barang) {
+            case "TV":
+                harga_satuan = 3000000;
+                    break;
+            case "Motor":
+                harga_satuan = 12000000;
+                    break;
+            case "Kulkas":
+                harga_satuan = 4000000;
+                    break;
+            default: harga_satuan = 0;
+                break;
+        }
+
+        //Variabel Proses
+        let jumlah_beli = 10; //input dapat diubah
+        let total_harga = harga_satuan * jumlah_beli;
+        let ppn = total_harga * 0.11; //PPN 11%
+
+        //Minimal diskon pembelian
+        let diskon = 0;
+        if(barang == "TV") diskon = 0.3 * total_harga;
+            else if (barang == "Motor") diskon = 0.2 * total_harga;
+                else diskon = 0.5 * total_harga;
+        let hasil_diskon = total_harga - diskon;
+
+        //Output
+        document.write("<h1>Data pembelian</h1>");
+        document.write(
+            "<br>Pembeli: " + pembeli +
+            "<br>Barang: " + barang +
+            "<br>Jumlah beli barang: " + jumlah_beli +
+            "<br>Harga Satuan: " + harga_satuan +
+            "<br>Total Harga: " + total_harga +
+            "<br>Diskon: " + diskon +
+            "<br>PPN: " + ppn +
+            "<br>Total harga di potong diskon: " + hasil_diskon
+        );     
+    </script>
+</body>
+</html>

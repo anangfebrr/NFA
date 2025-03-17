@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If Multiple Conditions</title>
+</head>
+<body>
+    <script>
+        let siswa = "Budi Santoso";
+        let nilai = 80;
+        let grade = " ";
+        let ket = " ";
+        let predikat = "";
+
+        //Ternary
+        ket = nilai >= 60 ? "Lulus" : "Tidak Lulus";
+
+        //If multikondisi
+        if (nilai > 85 && nilai <= 100) grade = "A";
+        else if (nilai > 75 && nilai <= 85) grade = "B";
+        else if (nilai >= 60 && nilai < 75) grade = "C";
+        else if (nilai >= 30 && nilai < 60) grade = "D";
+        else if (nilai >= 0 && nilai < 30) grade = "E";
+        else grade = "Maaf nilai anda tidak terdaftar";
+
+        //Switch case untuk mencari predikat
+        switch (grade) {
+            case "A": 
+                predikat = "Sempurna";
+                    break;
+            case "B": 
+                predikat = "Baik";
+                    break;
+            case "C": 
+                predikat = "Cukup";
+                    break;
+            case "D": 
+                predikat = "Kurang";
+                    break;
+            case "E": 
+                predikat = "Buruk";
+                    break;
+            default: predikat = " ";
+                break;
+        }
+
+        //Cetak
+        document.write(
+            "Nama Mahasiswa: " + siswa +
+            "<br>Nilai: " + nilai +
+            "<br>Grade: " + grade +
+            "<br>Keterangan: " + ket +
+            "<br>Predikat: " + predikat
+        );
+    </script>
+</body>
+</html>
