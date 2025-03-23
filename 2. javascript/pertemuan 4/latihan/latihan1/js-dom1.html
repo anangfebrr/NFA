@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mengubah teks elemen</title>
+</head>
+<body>
+    <h1 id="judul">Selamat Datang</h1> 
+    <button onclick="ubahTeks()">Ubah teks</button>
+    <p id="paragraph">Ini adalah paragraph</p>
+    <button onclick="ubahGaya()">Ubah gaya</button>
+
+    <div id="Container">
+        <p id="paragraph">Ini adalah paragraph</p>
+    </div>
+    <button onclick="tambahElemen()">Tambah paragraph</button>
+    <button onclick="hapusElemen()">Hapus paragraph</button>
+
+    <script>
+        function ubahTeks(){
+            document.getElementById("judul").innerText = "Teks selamat datang diubah ke selamat pagi";
+        }
+        function ubahGaya(){
+            document.getElementById("paragraph").style.color = "blue";
+            document.getElementById("paragraph").style.fontSize = "30px";
+        }
+        function tambahElemen(){
+            let paragraphBaru = document.createElement("p");
+            paragraphBaru.innerText = "parahraph baru telah ditambahkan";
+            document.getElementById("Container").appendChild(paragraphBaru);
+        }
+        function hapusElemen(){
+            let container = document.getElementById("Container");
+            let paragraph = document.getElementById("paragraph");
+            if (container.contains(paragraph)){
+                container.removeChild(paragraph);
+            } else {
+                alert("Paragraph tidak ditemukan");
+            }
+        }
+    </script>
+</body>
+</html>
