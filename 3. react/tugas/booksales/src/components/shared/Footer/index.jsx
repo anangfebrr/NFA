@@ -3,6 +3,7 @@ import { Link } from "react-router";
 export default function Footer(){
     return(
         <>
+        {/* Mengubah a href menjadi Link pada footer */}
             <div className="container">
                 <footer className="py-3 my-4">
                     <ul className="nav justify-content-center border-bottom pb-3 mb-3">

@@ -11,7 +11,7 @@ export default function Header(){
                 <span className="ms-2 fs-4">bookstore</span>
               </a>
             </div>
-
+              {/* Mengubah a href menajdi Link agar dapat bisa menggunakan routing pada react router */}
             <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
               <li><Link to="/" className="nav-link px-2">Home</Link></li>
               <li><Link to="/books" className="nav-link px-2">Book</Link></li>

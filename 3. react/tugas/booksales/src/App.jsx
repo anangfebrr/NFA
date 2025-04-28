@@ -8,6 +8,7 @@ import Contact from "./components/Pages/contact";
 
   return (
     <>
+    {/* Menambahkan Routing */}
       <div className="container">
         <BrowserRouter>
           <Routes>
