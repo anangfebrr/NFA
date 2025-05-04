@@ -1,0 +1,35 @@
+.services{
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+.title{
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+.cardContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.card{
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    width: 300px;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.cardTitle{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+}
+.cardDescription{
+    font-size: 1rem;
+    color: #555;
+    margin-top: 10px;
+}
