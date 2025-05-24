@@ -11,7 +11,7 @@
     @foreach ($genres as $item)
         <ul>
             <li>{{ $item['id'] }}</li>
-            <li>{{ $item['genre'] }}</li>
+            <li>{{ $item['name'] }}</li>
             <li>{{ $item['description'] }}</li>
         </ul>
     @endforeach
