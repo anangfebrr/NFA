@@ -33,7 +33,7 @@ class AuthorController extends Controller
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:100',
             'photo' => 'required|image|mimes:jpeg,jpg,png|max:2048',
-            'bio' => 'required|string'
+            'bio' => 'required|string',
         ]);
 
         // 2. Check validator error
@@ -52,7 +52,7 @@ class AuthorController extends Controller
         $author = Author::create([
             'name' => $request->name,
             'photo' => $image->hashName(),
-            'bio' => $request->bio,            
+            'bio' => $request->bio,
         ]);
 
         // 5. Response
@@ -89,14 +89,14 @@ class AuthorController extends Controller
             return response()->json([
                 'success' => false,
                 'message' => 'Resource not found'
-            ], 404); 
+            ], 404);
         }
 
         // 2. Validator
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:100',
-            'photo' => 'nullable|image|mimes:jpeg,jpg,png|max:2048',
-            'bio' => 'required|string'
+            'photo' => 'required|image|mimes:jpeg,jpg,png|max:2048',
+            'bio' => 'required|string',
         ]);
 
         if ($validator->fails()) {

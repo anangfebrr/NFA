@@ -15,7 +15,7 @@ Route::get('/user', function (Request $request) {
 Route::middleware(['auth:api'])->group(function() {
     // Transaction API
     Route::apiResource('/transactions', TransactionController::class)->only(['store', 'update', 'show', 'index']);
-    
+
     Route::middleware(['role:admin'])->group(function(){
         Route::apiResource('/authors', AuthorController::class)->only(['store', 'update', 'show']);
         Route::apiResource('/books', BookController::class)->only(['store', 'update', 'show']);
